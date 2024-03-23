@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 
 const Card = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin: 5px; 
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  width: 300px;
 
   .product-image {
     width: 100%;
@@ -14,21 +17,31 @@ const Card = styled.div`
     object-fit: cover;
   }
 
+  .product-title {
+    margin: 10px;
+    color: #375287;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
   .product-description {
-    padding: 16px;
+    padding: 10px;
+    color: #19263f;
+  }
 
-    .product-title {
-      margin: 0;
-      margin-bottom: 8px;
-      font-size: 20px;
-      font-weight: bold;
-    }
+  .product-price {
+    position: relative;
+    float:right;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #19263f;
+  }
 
-    .product-price {
-      margin: 0;
-      font-size: 16px;
-      color: #666;
-    }
+  .link-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
   }
 `;
 
