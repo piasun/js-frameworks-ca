@@ -1,5 +1,6 @@
 import useCartStore from '../../hooks/cartStoreHook';
 import { shallow } from 'zustand/shallow';
+import PriceCalculation from './PriceCalculation';
 
 const SingleProduct = ({ product }) => {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
@@ -24,7 +25,7 @@ const SingleProduct = ({ product }) => {
                     <p>{description}</p>
                 </div>
                 <div>
-                    <p>Price: {discountedPrice || price}</p>
+                    <PriceCalculation price={price} discount={discountedPrice}/>  
                 </div>
                 <div>
                     {tags.map(tag => (
