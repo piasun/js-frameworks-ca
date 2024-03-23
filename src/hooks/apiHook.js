@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react';
 
 const useApi = (url) => {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+  const [isError, setError] = useState(null);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -23,7 +23,7 @@ const useApi = (url) => {
     fetchProducts();
   }, [url]);
 
-  return {products, loading, error};
+  return {products, isLoading, isError};
 
 }
 
