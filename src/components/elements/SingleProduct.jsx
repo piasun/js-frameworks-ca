@@ -3,6 +3,7 @@ import { shallow } from 'zustand/shallow';
 import PriceCalculation from './PriceCalculation';
 import AddToCartButton from '../button/Button';
 import Reviews from './Reviews'; 
+import { SingleProductContainer } from '../product/productPage.styles';
 
 const SingleProduct = ({ product }) => {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
@@ -16,11 +17,13 @@ const SingleProduct = ({ product }) => {
     };
 
     return (
-        <>
+        <SingleProductContainer>
             <section>
                 <div>
                     <img src={imageUrl} alt={title} />
                 </div>
+            </section>
+            <section className="detail-container">    
                 <h1>{title}</h1>
                 <div>
                     <p>{description}</p>
@@ -28,19 +31,19 @@ const SingleProduct = ({ product }) => {
                 <div>
                     <PriceCalculation price={price} discount={discountedPrice}/>  
                 </div>
-                <div>
+                <div className="tags-container">
                     {tags.map(tag => (
                         <p key={tag}>#{tag}</p>
                     ))}
                 </div>
                 <div>
-                    <AddToCartButton/>
+                    <AddToCartButton onClick={addToCart}/>
+                </div>
+                <div>
+                <Reviews reviews={reviews}/>
                 </div>
             </section>
-            <section>
-                <Reviews reviews={reviews}/>
-            </section>
-        </>
+        </SingleProductContainer>
     );
 };
 

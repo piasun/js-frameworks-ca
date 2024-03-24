@@ -4,13 +4,13 @@ import Products from './elements/Products';
 
 const HomePage = () => {
   return (
-    <div>
+    <main>
       <h1>Welcome to Your Market Space</h1>
       <h3>Find your favourite product</h3>
       <div>
         <Products />
       </div>
-    </div>
+    </main>
   );
 };
 

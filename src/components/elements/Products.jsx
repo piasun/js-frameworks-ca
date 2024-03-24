@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useApi from "../../hooks/apiHook";
-import ProductContainer from "../product/productPage.styles";
+import { ProductContainer } from "../product/productPage.styles";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 

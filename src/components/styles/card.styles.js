@@ -10,6 +10,7 @@ const Card = styled.div`
   border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
+  background-color: ${props => props.theme.colors.white};
 
   .product-image {
     width: 100%;
@@ -49,7 +50,7 @@ const Card = styled.div`
     top: -30px;
     opacity: 0;
     width: 100%;
-    height: 85%;
+    height: 50%;
     display: flex;
     color: #e6e6e6;
     font-size: 30px;
