@@ -43,6 +43,27 @@ const Card = styled.div`
     justify-content: center;
     margin-top:10px;
   }
+
+  h3 {
+    left: 0;
+    top: -30px;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: #e6e6e6;
+    font-size: 30px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.7);
+    transition: opcaity 0.3s ease-in;
+
+    &:hover {
+      opacity: 1;
+    }
+
+  }
 `;
 
 export default Card;

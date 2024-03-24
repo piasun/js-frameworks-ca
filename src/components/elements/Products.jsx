@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useApi from "../../hooks/apiHook";
+import ProductContainer from "../product/productPage.styles";
 import ProductCard from "./ProductCard";
 import { Link } from "react-router-dom";
 
@@ -34,6 +35,7 @@ const Products = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
             />
+            <ProductContainer>
             {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => (
                     <section key={product.id}>
@@ -46,6 +48,7 @@ const Products = () => {
             ) : (
                 <div>No products found.</div>
             )}
+            </ProductContainer>
         </>
     );
 }

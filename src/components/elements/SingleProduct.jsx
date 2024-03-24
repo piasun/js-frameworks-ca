@@ -1,10 +1,12 @@
 import useCartStore from '../../hooks/cartStoreHook';
 import { shallow } from 'zustand/shallow';
 import PriceCalculation from './PriceCalculation';
+/*import StyledButton from '../button/button.styles';*/
+import Reviews from './Reviews'; 
 
 const SingleProduct = ({ product }) => {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
-
+    console.log(product);
     const { addProduct } = useCartStore(
         state => ({ addProduct: state.addProduct }),
         shallow
@@ -29,7 +31,7 @@ const SingleProduct = ({ product }) => {
                 </div>
                 <div>
                     {tags.map(tag => (
-                        <p key={tag}>{tag}</p>
+                        <p key={tag}>#{tag}</p>
                     ))}
                 </div>
                 <div>
@@ -37,11 +39,7 @@ const SingleProduct = ({ product }) => {
                 </div>
             </section>
             <section>
-                {reviews.length > 0 ? (
-                    reviews.map((review, index) => <p key={index}>{review}</p>)
-                ) : (
-                    <p>No reviews yet.</p>
-                )}
+                <Reviews reviews={reviews}/>
             </section>
         </>
     );
