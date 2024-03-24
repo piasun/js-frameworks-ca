@@ -1,12 +1,11 @@
 import useCartStore from '../../hooks/cartStoreHook';
 import { shallow } from 'zustand/shallow';
 import PriceCalculation from './PriceCalculation';
-/*import StyledButton from '../button/button.styles';*/
+import AddToCartButton from '../button/Button';
 import Reviews from './Reviews'; 
 
 const SingleProduct = ({ product }) => {
     const { title, imageUrl, price, discountedPrice, description, tags = [], reviews = [] } = product;
-    console.log(product);
     const { addProduct } = useCartStore(
         state => ({ addProduct: state.addProduct }),
         shallow
@@ -35,7 +34,7 @@ const SingleProduct = ({ product }) => {
                     ))}
                 </div>
                 <div>
-                    <button onClick={addToCart}>Add to cart</button>
+                    <AddToCartButton/>
                 </div>
             </section>
             <section>

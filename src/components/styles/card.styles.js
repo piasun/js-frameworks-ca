@@ -49,7 +49,7 @@ const Card = styled.div`
     top: -30px;
     opacity: 0;
     width: 100%;
-    height: 100%;
+    height: 85%;
     display: flex;
     color: #e6e6e6;
     font-size: 30px;
