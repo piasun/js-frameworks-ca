@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 
 const useCartStore = create((set) => ({
-  cartItems: [],
-  addToCart: (product) => set((state) => ({ cartItems: [...state.cartItems, product] })),
+  products: [],
+  addToCart: (product) => set((state) => ({ products: [...state.products, product] })),
   removeFromCart: (productId) => set((state) => ({
-    cartItems: state.cartItems.filter(item => item.id !== productId)
+    products: state.products.filter(item => item.id !== productId)
   })),
-  clearCart: () => set(() => ({ cartItems: [] })),
+  clearCart: () => set(() => ({ products: [] })),
 }));
 
 export default useCartStore;

@@ -3,20 +3,20 @@ import React, { createContext, useContext, useState } from 'react';
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [products, setproducts] = useState([]);
 
   const addToCart = (item) => {
-    setCartItems((prevItems) => [...prevItems, item]);
+    setproducts((prevItems) => [...prevItems, item]);
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prevItems) => prevItems.filter(item => item.id !== itemId));
+    setproducts((prevItems) => prevItems.filter(item => item.id !== itemId));
   };
 
-  const itemCount = cartItems.length;
+  const itemCount = products.length;
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, itemCount }}>
+    <CartContext.Provider value={{ products, addToCart, removeFromCart, itemCount }}>
       {children}
     </CartContext.Provider>
   );

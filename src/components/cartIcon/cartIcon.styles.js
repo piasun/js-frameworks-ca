@@ -1,24 +1,26 @@
 import styled from 'styled-components';
 
-export const CartIconWrapper = styled.div`
+export const StyledCartIcon = styled.div`
   position: relative;
-  display: inline-block;
   cursor: pointer;
-`;
-
-/*export const ShoppingCartIcon = styled.i`
-  font-size: 24px;
-  color: #ffffff;
-`;*/
-
-export const Badge = styled.span`
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: red;
   color: white;
-  border-radius: 50%;
-  padding: 4px 8px;
-  font-size: 12px;
-  font-weight: bold;
 `;
+
+export const ItemCountOverlay = styled.div`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: white;
+  color: #283c63;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+`;
+
+
+

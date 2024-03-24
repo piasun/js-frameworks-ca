@@ -1,14 +1,20 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { CartIconWrapper, Badge } from './cartIcon.styles';
+import { StyledCartIcon, ItemCountOverlay } from './cartIcon.styles';
+import { useCart } from '../cart/CartContext';
+import { Link } from 'react-router-dom';
 
-const CartIcon = ({ itemCount }) => {
+const CartIcon = () => {
+  const  { itemCount }  = useCart();
+
   return (
-    <CartIconWrapper>
+    <Link to="/checkout">
+    <StyledCartIcon>
       <FontAwesomeIcon icon={faShoppingCart} />
-      <Badge>{itemCount}</Badge>
-    </CartIconWrapper>
+      {itemCount > 0 && <ItemCountOverlay>{itemCount}</ItemCountOverlay>}
+    </StyledCartIcon>
+    </Link>
   );
 }
 

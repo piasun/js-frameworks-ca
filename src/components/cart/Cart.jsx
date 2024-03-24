@@ -1,5 +1,5 @@
 import React from 'react';
-import { useCartStore } from '../../hooks/cartStoreHook';
+import useCartStore from '../../hooks/cartStoreHook';
 import { useNavigate } from 'react-router-dom';
 import StyledCart from './Cart.styles';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ function Cart() {
     products.reduce((total, { price, discountedPrice, quantity }) => total + (Math.min(price, discountedPrice) * quantity), 0).toFixed(2);
 
   const handleCheckout = () => {
-    if (products.length > 0) {
+    if (products.length !== 0) {
       clearCart();
       navigate('/checkout-success');
     } else {
