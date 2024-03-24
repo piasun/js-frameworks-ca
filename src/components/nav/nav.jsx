@@ -13,7 +13,7 @@ const Nav = () => {
       <StyledNav>
         <ul>
           <li><Link to="./">Home</Link></li>
-          <li><Link to="../contact">Contact</Link></li>
+          <li><Link to="../contact/ContactPage.jsx">Contact</Link></li>
         </ul>
     </StyledNav>
     <CartIcon itemCount={itemCount}/>
