@@ -7,8 +7,10 @@ const ProductContainer = styled.div`
         padding: 20px;
 
         @media (max-width: 600px) {
-        grid-template-columns: 1fr; // Stack the cards on smaller screens
+        grid-template-columns: 1fr;
         }
 `;
 
 export default ProductContainer;
+
+

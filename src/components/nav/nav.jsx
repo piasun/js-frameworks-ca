@@ -1,16 +1,16 @@
 import React from 'react';
-import { NavWrapper, NavList, NavItem, NavLink  } from './nav.styles';
+import StyledNav from './nav.styles';
+import { Link } from 'react-router-dom';
 
 
 const Nav = () => {
     return (
-      <NavWrapper>
-      <NavList>
-        <NavItem><NavLink href="#">Home</NavLink></NavItem>
-        <NavItem><NavLink href="#">Product</NavLink></NavItem>
-        <NavItem><NavLink href="#">Contact</NavLink></NavItem>
-      </NavList>
-    </NavWrapper>
+      <StyledNav>
+        <ul>
+          <li><Link to="./">Home</Link></li>
+          <li><Link to="../contact">Contact</Link></li>
+        </ul>
+    </StyledNav>
     );
   }
   

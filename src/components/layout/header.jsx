@@ -1,14 +1,15 @@
 import React from 'react';
 import Header from './header.styles';
 import Nav from '../nav/nav';
-import CartIcon from '../cartIcon/cartIcon';
+import { StyledCartIcon } from '../cartIcon/cartIcon.styles';
+
 
 const HeaderComponent = () => {
   
   return (
     <Header>
       <Nav/>
-      <CartIcon/>
+      <StyledCartIcon/>
     </Header>
   );
 };
