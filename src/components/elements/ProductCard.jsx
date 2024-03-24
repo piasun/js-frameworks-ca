@@ -4,10 +4,10 @@ import PriceCalculation from './PriceCalculation';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ( {product}) => {
-    const {title, imageUrl, id, description, price, discountedPrice} = product;
+    const {title, imageUrl, price, discountedPrice} = product;
 
     return (
-        <Card key={id}>
+        <Card>
         <div>    
         <Link to={`/product/${product.id}`}>    
         <img className="product-image" src={imageUrl} alt={title} />

@@ -1,15 +1,13 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import StyledButton from './button.styles';
+import { useCart } from '../cart/CartContext';
 
-const ViewProductButton = () => {
-    let navigate = useNavigate();
+const AddToCartButton = ({product}) => {
+    const {addToCart} = useCart();
 
-    function handleClick() {
-        navigate('/productPage');
-    }
+    return (
+        <StyledButton onClick={() => addToCart(product)}>Add to Cart</StyledButton>
+    ); 
+};
 
-    return <StyledButton onClick={handleClick}>View Product</StyledButton>;
-}
-
-export default ViewProductButton;
+export default AddToCartButton;
