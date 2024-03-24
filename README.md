@@ -4,16 +4,16 @@ by Pia Sundsby
 
 ![Screenshot_yms](https://github.com/piasun/js-frameworks-ca/assets/77275966/e5f07314-8b88-45e4-b7d2-e20d11a1dde8)
 
-# Goal
+## Goal
 
 To apply knowledge of React to build an eCom store. The API we were using for this brief is: https://v2.api.noroff.dev/online-shop
 
-# Built with
+## Built with
 
-- HTML
-- CSS
-- JS
-- React
+- [JavaScript](https://javascript.com)
+- [CSS](https://no.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [HTML](https://no.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [React](https://react.dev/)
 - Zustand
 - Styled components
 
@@ -24,15 +24,6 @@ To apply knowledge of React to build an eCom store. The API we were using for th
    npm install
 3. Run Build to enable SASS: 
    npm run build 
-
-## Built with
-
-- [JavaScript](https://javascript.com)
-- [CSS](https://no.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [HTML](https://no.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [React](https://react.dev/)
-- Zustand
-- Styled components
 
 ## Delivery
 - [Github Repo](https://github.com/piasun/js-frameworks-ca)
